@@ -51,6 +51,7 @@ export default function Login() {
 
   useEffect(() => {
     sessionStorage.setItem("user",JSON.stringify(user))
+    console.log(user);
   },[user])
 
   const sendLogin = () => {
@@ -71,8 +72,6 @@ export default function Login() {
   const gotToProduct = () => {
     navigate('/products')
   }
-
-
 
   return (
     <div className="login container d-flex flex-column justify-content-center align-items-center">

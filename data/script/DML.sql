@@ -1,22 +1,26 @@
 DELETE FROM products;
-DELETE FROM orders;
 DELETE FROM users;
 
 INSERT INTO users (user_name, email, user_password, admin_role) VALUES 
 ('Jhon Do', 'email@mail.com', '1234', false),
 ('admin','admin@mail.com', 'admin', true),
 ('toto','admin@mail.com', 'tata', true),
-('foo bar','foobar@mail.com','azerty', false);
-
-
-INSERT INTO orders (product_name, user_id) VALUES 
-('teddy bear', (SELECT id FROM users WHERE user_name = 'Jhon Do')),
-('book', (SELECT id FROM users WHERE user_name = 'Jhon Do')),
-('rise cooker', (SELECT id FROM users WHERE user_name = 'toto')),
-('shoes',(SELECT id FROM users WHERE user_name = 'Jhon Do')),
-('sun glasses',(SELECT id FROM users WHERE user_name = 'toto')),
-('desk',(SELECT id FROM users WHERE user_name = 'Jhon Do')),
-('keyboard',(SELECT id FROM users WHERE user_name = 'toto'));
+('foo bar','foobar@mail.com','azerty', false),
+('Chelsea West', 'walkercrystal@gmail.com', 'dkfjEJkk(4', false),
+('Kelly Day', 'opatton@fitzgerald.net', 'PiEmCDoZ&5', false),
+('Jessica Lopez', 'darryl47@acosta.biz', '3pReeJlq@I', false),
+('Meghan Ryan', 'valenzueladanielle@ellis.biz', 'Enk^5Ux6(B', false),
+('Keith Aguilar', 'samanthasantos@yahoo.com', 'b+$4L2yG_b', false),
+('Patricia Phillips', 'emily20@hotmail.com', '7)@Gpu9+$4', false),
+('Jacqueline Brooks', 'bryan13@gmail.com', 's(T%2H(kD^', false),
+('Jennifer Waller PhD', 'osanchez@yahoo.com', 'ONVA01Go8&', false),
+('Michael Dorsey', 'tonya83@hotmail.com', 'Q@D6BuQC(x', false),
+('Tonya Rangel', 'gregory34@gonzalez.net', 'JqkFlhkq#5', false),
+('Cassandra Wall', 'imartin@calderon.org', 'u)V52okf@G', false),
+('Regina Watson', 'ann00@brock.com', 'Ow@6PbyRam', false),
+('Katherine Wilson', 'blee@alvarez-phillips.com', 'L&1SsZeqNb', false),
+('Alexander Wilson', 'gblackburn@duncan-turner.net', 'UKA49Mh@^Y', false),
+('Andrea Shaw', 'juliechandler@yahoo.com', '((0DzK70eK', false);
 
 
 INSERT INTO products (product_name, description, price) VALUES
@@ -71,4 +75,3 @@ INSERT INTO products (product_name, description, price) VALUES
 ('air purifier', 'breathe cleaner, healthier air', 199.99),
 ('guitar', 'make music with this classic instrument', 249.99);
 
-SELECT * FROM products;
