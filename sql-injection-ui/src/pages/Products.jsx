@@ -3,7 +3,6 @@ import ProductCard from '../components/ProductCard.jsx'
 
 export default function Products() {
 
-  const [user] = useState(JSON.parse(sessionStorage.getItem("user")))
   const [products, setProducts] = useState([]);
 
   useState(async () => {

@@ -50,7 +50,6 @@ export default function Login() {
   };
 
   useEffect(() => {
-    sessionStorage.setItem("user",JSON.stringify(user))
     console.log(user);
   },[user])
 

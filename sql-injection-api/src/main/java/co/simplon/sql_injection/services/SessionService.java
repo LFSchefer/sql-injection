@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import co.simplon.sql_injection.dtos.LoginDto;
 import co.simplon.sql_injection.dtos.SessionDto;
-import co.simplon.sql_injection.mappers.SessionMapper;
+import co.simplon.sql_injection.entities.User;
 import co.simplon.sql_injection.repositories.CustomRepository;
 
 @Service
@@ -17,6 +17,8 @@ public class SessionService {
 	}
 
 	public SessionDto login(LoginDto input) {
-		return SessionMapper.entityToSessionDto(repo.login(input));
+		User user = repo.login(input);
+		return new SessionDto(user.getUserName(), user.getEmail(), user.isAdminRole());
 	}
+
 }

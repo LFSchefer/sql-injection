@@ -26,7 +26,7 @@ public class CustomRepository {
 		return entityManager.createNativeQuery(QUERY, Product.class).getResultList();
 	}
 
-	public Product getProducts(String id) {
+	public Product getProduct(String id) {
 		String QUERY = "SELECT * FROM products WHERE id = " + id;
 		return (Product) entityManager.createNativeQuery(QUERY, Product.class).getSingleResult();
 	}

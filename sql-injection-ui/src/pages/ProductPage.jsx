@@ -5,7 +5,6 @@ export default function ProductPage() {
 
   const params = useParams();
   const id = params.id;
-  const [user] = useState(JSON.parse(sessionStorage.getItem("user")));
   const [product, setProduct] = useState(null);
 
   const fetchData = useCallback(async () => {

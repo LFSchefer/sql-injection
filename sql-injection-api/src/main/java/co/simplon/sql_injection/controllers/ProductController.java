@@ -24,13 +24,13 @@ public class ProductController {
 	}
 
 	@GetMapping
-	public ResponseEntity<List<ProductDto>> get() {
-		return ResponseEntity.ok(service.get());
+	public ResponseEntity<List<ProductDto>> getAll() {
+		return ResponseEntity.ok(service.getProducts());
 	}
 
 	@GetMapping("/{id}")
 	public ResponseEntity<ProductDto> get(@PathVariable("id") String id) {
-		return ResponseEntity.ok(service.get(id));
+		return ResponseEntity.ok(service.getProduct(id));
 	}
 
 }
