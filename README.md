@@ -41,7 +41,7 @@ npm install
 ```
 And launch the server :
 ```bash
-npm run dev
+npm start
 ```
 
 The project is installed. :tada:
