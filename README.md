@@ -8,7 +8,7 @@ This project uses : Java Spring Boot, Maven, PostgreSql and React.
 ### DataBase
 Create your DB.
 ```sql
-CREATE DATABASE sql-injection;
+CREATE DATABASE sql_injection;
 ```
 When your project and your database are connected, run these scripts :
 
